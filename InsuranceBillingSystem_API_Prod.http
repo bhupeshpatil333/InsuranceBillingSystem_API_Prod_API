@@ -1,0 +1,6 @@
+@InsuranceBillingSystem_API_Prod_HostAddress = http://localhost:5046
+
+GET {{InsuranceBillingSystem_API_Prod_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
