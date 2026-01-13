@@ -31,6 +31,9 @@ namespace InsuranceBillingSystem_API_Prod.API.Controllers
                 return Unauthorized(ApiResponse<string>.ErrorResponse("Invalid credentials"));
             }
 
+            if (user.LockoutEnd != null && user.LockoutEnd > DateTimeOffset.UtcNow)
+                return Unauthorized(ApiResponse<string>.ErrorResponse("Account is deactivated. Please contact admin."));
+
             var roles = await _userManager.GetRolesAsync(user);
             var token = _jwtService.GenerateToken(user, roles);
 
