@@ -15,5 +15,7 @@ namespace InsuranceBillingSystem_API_Prod.Domain.Entities
 
         [Column(TypeName = "decimal(10,2)")]
         public decimal Cost { get; set; }
+
+        public bool IsActive { get; set; }
     }
 }

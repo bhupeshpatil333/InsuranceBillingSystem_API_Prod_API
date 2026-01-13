@@ -65,9 +65,9 @@ namespace InsuranceBillingSystem_API_Prod.Application.Services
                 BillItems = billItems,
             };
 
-            bill.PaidAmount = 0;
-            bill.RemainingAmount = bill.NetPayable;
-            bill.Status = "Pending";
+            //bill.PaidAmount = 0;
+            //bill.RemainingAmount = bill.NetPayable;
+            //bill.Status = "Pending";
 
             bill.InvoiceNumber = await GenerateInvoiceNumberAsync();
             _context.Bills.Add(bill);

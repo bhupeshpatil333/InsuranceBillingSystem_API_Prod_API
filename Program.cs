@@ -101,6 +101,8 @@ namespace InsuranceBillingSystem_API_Prod
             builder.Services.AddScoped<IEmailService, EmailService>();
             //builder.Services.AddScoped<InvoicePdfDocument>();
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IServiceService, ServiceService>();
+
 
 
 
