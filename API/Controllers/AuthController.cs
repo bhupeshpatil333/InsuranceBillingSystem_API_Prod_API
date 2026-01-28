@@ -42,7 +42,8 @@ namespace InsuranceBillingSystem_API_Prod.API.Controllers
                 new LoginResponseDto
                 {
                     Token = token,
-                    Role = roles.FirstOrDefault()
+                    Role = roles.FirstOrDefault(),
+                    Username = user.UserName
                 }));
         }
     }
